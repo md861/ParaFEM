@@ -61,9 +61,7 @@ Numerical parameters, e.g. the quadrature points for integration, total number o
 * `dt` - step size in time.
 * `n_istep` - number of time iterations to be run. Thus, total time = `dt*n_istep`.
 * `RKM_Order` - determines the order of Runge-Kutta method for time integration. Make sure to initialize the corresponding Butcher tableau (`a_RKM`,`b_RKM`,`c_RKM`) in the "!Initialize" section (in the same file *femSolver.f90*).
-* `Cp` - phase velocity of the wave.
 * `NANGL` - number of enrichment functions per node. Set `NANGL = 1` for purely p-FEM solutions.
-* `K_W` - wavenumber of the enrichment functions. NB: these are not used if `NANGL = 1`.
 
  ## Description of files:
  A short summary of some files (which are usually modified the most) is presented here. 
