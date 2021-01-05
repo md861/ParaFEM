@@ -67,7 +67,6 @@ Numerical parameters, e.g. the quadrature points for integration, total number o
  A short summary of some files (which are usually modified the most) is presented here. 
  * *dat* - This is the "su2" format mesh file supplied by the user, generated from Gmsh. The file should be named as "dat" to be read by the solver.
  * *femSolver.f90* - The main code that coordinates the subroutines and functions. This is where you could change some numerical parameters e.g. 
-    * the wavenumber and angular frequency of the problem, 
     * number of integration points to be used, 
     * step size in time for finite differences, 
     * total number of timesteps, 
