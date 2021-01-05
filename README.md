@@ -1,5 +1,5 @@
 # ParaFEM
-A Fortran code to solve an Initial-Boundary-value scalar wave problem in 2D. The solver uses semidiscrete formulation with lagrange polynomials based Finite Element Method (FEM) for space and explicit Runge-Kutta family of methods for time discretizations, respectively. The solver also provides an option to enrich the solution space for better convergence rates (these would be developed in the future versions). The code is written for the Linux API, however, the system calls could be modified to be run over other operating systems as well. 
+A Fortran code to solve an Initial-Boundary-value diffusion problem in 2D. The solver uses semidiscrete formulation with lagrange polynomials based Finite Element Method (FEM) for space and explicit Runge-Kutta family of methods for time discretizations, respectively. The solver also provides an option to enrich the solution space for better convergence rates (although these would be optimised in the future versions). The code is written for the Linux API, however, the system calls could be modified to be run over other operating systems as well. 
 
 <img src="https://github.com/md861/ParaFEM/blob/main/images/mesh_p2.png" width="400" height="450"> <img src="https://github.com/md861/ParaFEM/blob/main/images/diff2.gif" width="400" height="450">
 ## Features
@@ -43,7 +43,7 @@ NB: At the moment, only Neumann conditions may be applied. Although, the future 
 
 ## Implementing problem sources
 ### Initial condition
-Modify the *pellib_DIC.f90* file to specify the initial conditions for the wave amplitude (`FZ_Phi`) and its time derivative (`FZ_Vlcty`).
+Modify the *pellib_DIC.f90* file to specify the initial conditions for the amplitude (`FZ_Phi`) and its time derivative (`FZ_Vlcty`).
 ### Boundary condition(s)
 * Non-homogeneous Neumann boundary: 
     * In *pellib.f90* under the "!Integrate over edges" section set the `NBC_pos` index as the same as the corresponding index of the boundary type defined during meshing (see [Mesh preparation](#mesh-preparation) for details). In this section, update the `GZ` variable that is used to implement the relevant condition for the given boundary type (chosen using `NBC_pos` index). Notice that `n(1)` and `n(2)` store the x and y components of the normal vector to a given edge. This normal vector is computed for each edge automatically during run-time. 
