@@ -86,3 +86,7 @@ The terminal then outputs the time step currently being processed, with the erro
  
 ## Example files:
 An example *dat* file that has a 2D mesh with 2-nd order quadrilateral elements (generated with [Gmsh](https://gmsh.info/)) is located in the [Example](https://github.com/md861/ParaFEM/tree/main/Example) folder. The Paraview plots of the mesh and an example numerical solution for diffusion with homogeneous Neuman boundaries and a non-zero initial distribution solved over this mesh, are shown as animated gifs at the beginning of this read-me file. 
+
+## References
+<a id="1">[1]</a> 
+M. Drolia, *et al*. Enriched finite elements for initial-value problem of transverse electromagnetic waves in time domain. *Computers & Structures*, 182, 354-367, 2017.
